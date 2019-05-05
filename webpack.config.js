@@ -26,8 +26,8 @@ module.exports = {
     //其实很简单的，只要配置这个参数就可以了
     proxy: {
       '/rsys-patient/': {
-        target: 'http://192.168.0.113:8080/',
-        // target: 'http://192.168.0.111:8080/',
+        // target: 'http://192.168.0.113:8080/',
+        target: 'http://192.168.0.111:8080/',
         secure: false
       }
     },
