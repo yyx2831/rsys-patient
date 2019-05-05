@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<base th:href="${contextPath}" href="/pages/">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>会员中心</title>
+    <base href="../" />
+    <link rel="stylesheet" href="public/css/common.css" />
+    <link rel="stylesheet" href="public/css/vip.css" />
+    <style>
+      [v-if] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="vip">
+      <div v-if="selfInfor.vipLevel == -1" class="text-center loading-box">
+        <img src="./public/img/jiazai.gif" />
+      </div>
+      <div v-if="selfInfor.vipLevel != -1">
+        <div class="card-box">
+          <div class="icon-box">
+            <img :src="selfInfor.headimg" />
+            <span>至尊会员</span>
+          </div>
+          <img
+            class="container"
+            src="./public/img/huiyuanka@2x.png"
+            v-if="selfInfor.vipLevel == 1"
+          />
+          <img
+            class="container"
+            src="./public/img/huiyuanka_1@2x.png"
+            v-if="selfInfor.vipLevel != 1"
+          />
+        </div>
+        <div class="content-box">
+          <p v-if="selfInfor.vipLevel == 1">
+            您的会员还有<span class="day-tip">{{ selfInfor.vipEndDay }}</span
+            >天到期
+          </p>
+          <img v-if="selfInfor.vipLevel == 1" src="./public/img/xufei@2x.png" />
+          <img
+            v-if="selfInfor.vipLevel != 1"
+            src="./public/img/kaitong@2x.png"
+          />
+        </div>
+        <ul class="intro-box clearfloat">
+          <li>
+            <img src="./public/img/wuxianmianfei@2x.png" />
+            <p>无限次数</p>
+            <p>免费咨询</p>
+          </li>
+          <li>
+            <img src="./public/img/yaoshixuanze@2x.png" />
+            <p>认证药师</p>
+            <p>任意选择</p>
+          </li>
+          <li>
+            <img src="./public/img/youxianjieda@2x.png" />
+            <p>实时资讯</p>
+            <p>优先解答</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script src="plugin/vue/vue.js"></script>
+    <script src="public/js/common.js"></script>
+    <script src="public/js/vip.js"></script>
+  </body>
+</html>

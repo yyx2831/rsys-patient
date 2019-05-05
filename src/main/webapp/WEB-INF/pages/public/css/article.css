@@ -1,0 +1,10 @@
+.fillet1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.imgLi1 {
+    margin: 0 0.3rem;
+}

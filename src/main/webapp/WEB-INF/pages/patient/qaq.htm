@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>问题反馈</title>
+    <base href="../" />
+    <link rel="stylesheet" href="public/css/common.css" />
+    <link rel="stylesheet" href="public/css/qaq.css" />
+    <style>
+      [v-if] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="qaq">
+      <div class="title-box">
+        <span class="circle"></span>请文字描述您的问题
+      </div>
+      <div class="content-box">
+        <textarea id="content" v-model="content" @input="calcContent()">
+        </textarea>
+        <span class="letter-box">{{ content.length }}/200</span>
+      </div>
+
+      <div class="title-box">
+        <span class="circle"></span>请上传图片(最多上传3张)
+      </div>
+      <ul class="img-box clearfloat">
+        <li v-for="(img,index) in imgs">
+          <img class="up-img" :src="img" />
+          <img
+            src="./public/img/shanchu@2x.png"
+            class="delete-btn"
+            @click="deleteImg(index)"
+          />
+        </li>
+        <li class="add-box" v-show="imgs.length < 3">
+          +<input type="file" id="selectfiles" />
+        </li>
+      </ul>
+      <div class="text-center">
+        <button class="submit-btn" @click="submit" v-if="!isLoading">
+          确认提交
+        </button>
+        <button class="submit-btn" v-if="isLoading">
+          提交中
+        </button>
+      </div>
+    </div>
+    <script src="plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script src="plugin/vue/vue.js"></script>
+    <script src="public/js/common.js"></script>
+    <script src="public/js/plupload.full.min.js"></script>
+    <script src="public/js/uploadImg.js"></script>
+    <script src="public/js/qaq.js"></script>
+  </body>
+</html>

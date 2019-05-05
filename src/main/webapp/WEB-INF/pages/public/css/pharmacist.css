@@ -1,0 +1,206 @@
+.searchLenovoN1{
+    color: #ffedd7;
+    font-size: 16px;
+}
+.searchLenovo{
+    transition:all 1s;
+    -moz-transition:all 1s; /* Firefox 4 */
+    -webkit-transition:all 1s; /* Safari and Chrome */
+    -o-transition:all 1s; /* Opera */
+    width: 100%;
+    height: 0;
+    background-color: rgba(162, 162, 162, 0.67);
+    z-index: 4;
+    position: fixed;
+    top: 0.9rem;
+    border-radius: 0 0 1em 1em;
+}
+#searchbar{
+    z-index: 3;
+    width: 100%;
+    position: fixed;
+}
+
+.department-1 {
+    background-color: #5ad67e;
+    width: 100%;
+    position: relative;
+    left: -0.24rem;
+}
+
+.department0, .department1, .department2, .department3, .department4 {
+    width: 100%;
+    position: relative;
+    left: -0.24rem;
+}
+
+.container {
+    width: 100%;
+    height: 1000px;
+    background: #ccc;
+}
+
+.liveDiv {
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: green;
+    z-index: 3;
+}
+
+.ziXunT {
+    display: inline-block;
+    font-size: 0.1rem;
+    color: #5ac870;
+}
+
+.ziXun img {
+    margin: 0.1rem;
+    height: 60%;
+}
+
+.ziXunO {
+    margin: 0.2rem 0;
+    width: 40%;
+}
+
+.ziXun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -0.6rem;
+    border-radius: 0.3rem;
+    border: 1px solid #5ac870;
+    width: 2.5rem;
+    height: 0.5rem;
+}
+
+@media screen and (max-width: 320px) {
+    .ziXun {
+        width: 3.21rem;
+    }
+}
+
+.advisory {
+    position: relative;
+    top: 0.1rem;
+    left: -0.59rem;
+    font-size: 0.2rem;
+    color: #d3d3d3;
+    width: 50%;
+}
+
+.ysTitle {
+    display: flex;
+    align-items: center;
+    height: 4%;
+    width: 3.726rem;
+    position: relative;
+    left: -0.4rem;
+}
+
+.dashed1 .ui-border-t .ui-list-info .depict {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    position: relative;
+    left: -0.59rem;
+    font-size: 0.25rem;
+    width: 3.319rem;
+}
+
+.dashed1 .ui-border-t .ysName {
+    position: relative;
+    left: -0.2rem;
+    font-size: 0.32rem;
+    display: inline-block;
+    width: 30%;
+}
+
+.keSi {
+    color: #5ad67e;
+    font-size: 0.24rem;
+    width: 60%;
+    position: relative;
+    left: -0.2rem;
+}
+
+.imgLift {
+    position: relative;
+    left: -0.5rem;
+}
+
+.dashed1 {
+    display: flex;
+    justify-content: center;
+}
+
+.dashed1 .rightLi1 {
+    background-color: red;
+    float: left;
+    width: 0;
+    border: none;
+}
+
+.rightLi2 {
+    width: 70%;
+    float: right;
+    border: none;
+}
+
+.dashed1 .rightList {
+    position: relative;
+    left: 1rem;
+    top: 0.96rem;
+    width: 60%;
+    border-bottom: 1px dashed #bcbcbc;
+}
+
+.rightList {
+    width: 70%;
+    float: right;
+}
+
+.leftList {
+    position: fixed;
+    top: 0.96rem;
+    z-index: 3;
+    border-right: 1px solid #bcbcbc;
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+.department {
+    text-align: center;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+li {
+    border-bottom: 1px dashed #bcbcbc;
+}
+
+.ui-list-img-square span {
+    border-radius: 50%;
+    width: 0.9rem;
+    height: 0.9rem;
+    position: relative;
+    /*top: 10px;*/
+    /*left: 10px;*/
+    top: 0.2rem;
+    left: 0.2rem;
+}
+
+html {
+    font-size: 100px;
+}
+
+body {
+    font-size: .12rem; /* 在 375 屏幕宽相当于 12px */
+}

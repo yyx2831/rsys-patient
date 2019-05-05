@@ -1,0 +1,42 @@
+/*
+Error: Invalid US-ASCII character "\xE6"
+        on line 11 of screen.scss
+
+6: @import "compass/layout";
+7: @import "compass/css3";
+8: @import "compass/typography";
+9: @import "compass";
+10: 
+11: //查看支持浏览器
+12: //@debug browsers();
+13: 
+14: //配置支持浏览器
+15: //$supported-browsers: chrome;
+16: //$browser-minimum-versions: ('ie':'8');
+
+Backtrace:
+screen.scss:11
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/util.rb:1325:in `rescue in block in find_encoding_error'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/util.rb:1322:in `block in find_encoding_error'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/util.rb:1321:in `each'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/util.rb:1321:in `each_with_index'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/util.rb:1321:in `find_encoding_error'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/util.rb:930:in `check_sass_encoding'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/engine.rb:439:in `check_encoding!'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/engine.rb:395:in `_to_tree'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:391:in `run'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/exec/base.rb:52:in `parse'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/exec/base.rb:19:in `parse!'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.4.25/bin/sass:13:in `<top (required)>'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/bin/sass:23:in `load'
+/Users/zinrose/.rvm/rubies/ruby-2.6.3/bin/sass:23:in `<main>'
+/Users/zinrose/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/zinrose/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE6\"\A         on line 11 of screen.scss\A \A 6: @import \"compass/layout\";\A 7: @import \"compass/css3\";\A 8: @import \"compass/typography\";\A 9: @import \"compass\";\A 10: \A 11: //查看支持浏览器\A 12: //@debug browsers();\A 13: \A 14: //配置支持浏览器\A 15: //$supported-browsers: chrome;\A 16: //$browser-minimum-versions: ('ie':'8');"; }

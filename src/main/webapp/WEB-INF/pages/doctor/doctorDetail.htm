@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base th:href="${contextPath}" href="/pages/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>医生详情</title>
+    <link rel="stylesheet" href="../public/css/common.css">
+    <link rel="stylesheet" href="../public/css/doctorDetail.css">
+</head>
+<body>
+<input type="hidden" id="doctorId" value="1" th:value="${doctorId}"/>
+<div class="header">
+    <!--<div class="back-btn"></div>-->
+    医生简介</div>
+<div class="detail-content ctrl">
+    <div class="doctor-pandect">
+        <img :src="doctor.headimg" class="doctor-photo" alt="">
+        <div class="doctor-pantail">
+            <p class="doctor-name">{{doctor.name}}</p>
+            <p class="doctor-class">{{doctor.title}}  |  {{doctor.department}}</p>
+            <p class="doctor-number">咨询量：{{doctor.receptionCount}}</p>
+            <p class="doctor-bility">30分钟回复率 10%</p>
+        </div>
+    </div>
+    <div class="doctor-detail">
+        <div class="content-eg">
+            <div class="detail-title">
+                <img src="../public/img/jianj_1.png" class="detail-titleImg" alt="">
+                执业点
+            </div>
+            <div class="detail-text">
+                {{doctor.hospital}}
+            </div>
+        </div>
+        <div class="content-eg">
+            <div class="detail-title">
+                <img src="../public/img/jianj_2.png" class="detail-titleImg" alt="">
+                医生简介
+            </div>
+            <div class="detail-text">
+                {{doctor.material}}
+            </div>
+        </div>
+        <div class="content-eg">
+            <div class="detail-title">
+                <img src="../public/img/jianj_3.png" class="detail-titleImg" alt="">
+                擅长疾病
+            </div>
+            <div class="detail-text">
+                {{doctor.specialty}}
+            </div>
+        </div>
+        <div class="content-eg">
+            <div class="detail-title">
+                <img src="../public/img/jianj_4.png" class="detail-titleImg" alt="">
+                咨询服务
+            </div>
+            <div class="detail-text">
+            <div class="ask-box" v-if="doctor.consultation.quantity">
+                咨询费用：<span>{{doctor.consultation.quantity}}条消息￥{{doctor.consultation.price}}</span>
+            </div>
+                提示：<br/>
+                1. 咨询有效期24小时，可向医生发送{{doctor.consultation.quantity}}条消息<br/>
+                2. 医生可根据您的咨询酌情追加消息条数<br/>
+                3. 医生可能在门诊或手术中，如无法及时回复请您谅解
+            </div>
+        </div>
+    </div>
+    <div @click="goToChat" class="to-communicate" v-if="doctor.consultation.quantity">立即咨询</div>
+</div>
+
+</body>
+<script src="../plugin/jquery/jquery-3.2.1.min.js"></script>
+<script src="../plugin/vue/vue.js"></script>
+<script src="../public/js/common.js"></script>
+<script src="../public/js/doctorDetail.js"></script>
+</html>

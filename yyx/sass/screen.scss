@@ -1,0 +1,96 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "normalize";
+@import "compass/layout";
+@import "compass/css3";
+@import "compass/typography";
+@import "compass";
+
+//查看支持浏览器
+//@debug browsers();
+
+//配置支持浏览器
+//$supported-browsers: chrome;
+//$browser-minimum-versions: ('ie':'8');
+.stretch-full {
+  @include stretch(1rem, 1rem, 1rem, 1rem)
+}
+
+.boxShadow {
+  @include box-shadow(1rem, 2rem, 3rem, 4rem, #cfcecf)
+}
+
+.inline-block {
+  @include inline-block()
+}
+
+.test-opacity {
+  @include opacity(0.8)
+}
+
+.testDiv {
+  width: 1rem;
+  height: 1rem;
+  background-color: #0E98CB;
+}
+
+.transition {
+  @include transition(2s)
+}
+
+a {
+  //@include hover-link();
+  //@include link-colors(#00c,#0cc,#c0c,#ccc,#cc0)
+  @include unstyled-link()
+}
+
+.list-unStyle {
+  @include no-bullets()
+}
+
+.list-unStyle-li {
+  @include no-bullet()
+}
+
+.list-inline {
+  @include inline-list()
+}
+
+.list-horizontal {
+  @include horizontal-list(0, right)
+}
+
+.background-image {
+  background-image: inline-image('70A07747-99B7-4937-A917-E041A4FC8011.png')
+}
+
+.div1 {
+  width: image-width('70A07747-99B7-4937-A917-E041A4FC8011.png');
+  height: image-height('70A07747-99B7-4937-A917-E041A4FC8011.png');
+}
+
+.background {
+  background: #86CD74;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+  width: 94%;
+  height: 3rem;
+  @include border-radius(10px);
+  position: relative;
+  top: 1.5rem;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  @include border-radius(50%)
+}

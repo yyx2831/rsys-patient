@@ -1,0 +1,45 @@
+ul {
+  background: #fff;
+}
+ul li {
+  padding: 0.25rem 0.3rem 0 0;
+}
+.item-left {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+.item-left img {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.item-right {
+  float: left;
+  width: 80%;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px dashed #ccc;
+}
+.item-right p {
+  color: #3f3f3f;
+  font-size: 0.32rem;
+  text-align: justify;
+}
+.item-right .time-box {
+  font-size: 0.28rem;
+  color: #6f6f6f;
+  text-align: right;
+  padding-top: .05rem;
+}
+.empty-box{
+  margin: 20% 0 0;
+  text-align: center;
+}
+.empty-box img{
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.empty-box p {
+  font-size: .28rem;
+  color: #9f9f9f;
+  padding-top: .5rem;
+}

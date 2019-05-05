@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<base th:href="${contextPath}" href="/pages/">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>电子券</title>
+    <base href="../" />
+    <link rel="stylesheet" href="public/css/common.css" />
+    <link rel="stylesheet" href="public/css/coupon.css" />
+    <style>
+      [v-if] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="coupon">
+      <ul class="item-box">
+        <li class="clearfloat" v-for="coupon in list">
+          <div class="item-left" v-if="coupon.type == 1">
+            ¥<span>{{ coupon.value }}</span>
+          </div>
+          <div class="item-left" v-if="coupon.type == 0">
+            <span class="free-tip">免费</span>
+          </div>
+          <div class="line-box">
+            <img src="./public/img/line@2x.png" />
+          </div>
+          <div class="item-right">
+            <div class="item-right-top clearfloat">
+              <span v-if="coupon.type == 1">现金抵用券</span>
+              <span v-if="coupon.type == 0">单次咨询券</span>
+              <button class="use-btn" @click="goUse()">立即使用</button>
+            </div>
+            <div class="item-right-bottom">
+              有效期: {{ coupon.createtime | mytime }}-{{
+                coupon.availabletime | mytime
+              }}
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="empty-box" v-if="!list.length && !isLoading">
+        <img src="./public/img/dianziquan@2x.png" />
+        <p>暂无消息~</p>
+      </div>
+      <div v-show="isLoading" class="text-center loading-box">
+        <img src="./public/img/jiazai.gif" />
+      </div>
+      <div v-show="!isMore" class="text-center nomore-box">
+        暂无更多
+      </div>
+    </div>
+
+    <script src="plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script src="plugin/vue/vue.js"></script>
+    <script src="public/js/common.js"></script>
+    <script src="public/js/vue-common.js"></script>
+    <script src="public/js/coupon.js"></script>
+  </body>
+</html>

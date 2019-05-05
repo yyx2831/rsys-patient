@@ -1,0 +1,102 @@
+.top-box {
+  background: #86cf70;
+  height: 3rem;
+  position: relative;
+}
+.info-box {
+  background: #fff;
+  width: 90%;
+  height: 3.4rem;
+  border-radius: 8px;
+  margin: 0 auto;
+  position: absolute;
+  top: 1rem;
+  left: 5%;
+}
+.info-box .name-box {
+  font-size: 0.36rem;
+  color: #3f3f3f;
+  text-align: center;
+  margin-top: 0.85rem;
+}
+.info-box .phone-box {
+  color: #3f3f3f;
+  font-size: 0.32rem;
+  text-align: center;
+  width: 90%;
+  border-bottom: 1px solid #cccccc;
+  margin: 0 auto;
+  padding-bottom: 0.2rem;
+  min-height: 0.32rem;
+}
+.middle-box {
+  font-size: 0.32rem;
+  color: #3f3f3f;
+  width: 90%;
+  margin: 1.8rem auto 0;
+  background: #fff;
+  border-radius: 8px;
+}
+.middle-box li {
+  padding: 0.26rem 0.24rem;
+  padding-bottom: 0;
+}
+.middle-box .item-box {
+  padding-bottom: 0.26rem;
+  border-bottom: 1px dashed #ccc;
+  display: block;
+}
+.middle-box .msg-right {
+  float: right;
+  height: 0.3rem;
+  padding-top: 0.06rem;
+}
+.self-headImg {
+  position: absolute;
+  left: calc(50% - 0.68rem);
+  top: -0.68rem;
+  width: 1.36rem;
+  height: 1.36rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.vip-box {
+  position: absolute;
+  top: 0.3rem;
+  right: calc(50% - 0.68rem);
+  width: 0.42rem;
+  height: 0.42rem;
+}
+.self-xingb {
+  width: 0.32rem;
+  height: 0.32rem;
+}
+.msg-left .icon {
+  height: 0.44rem;
+  vertical-align: text-bottom;
+  margin-right: 0.1rem;
+}
+.recommend-box {
+  text-align: center;
+}
+.recommend-btn {
+  width: 5.75rem;
+  margin-top: 0.25rem;
+}
+.bottom-box {
+  margin: 0.3rem auto 2rem;
+}
+.badge {
+  border-radius: 50%;
+  background: #ff3c3c;
+  color: #fff;
+  font-size: 0.22rem;
+  float: right;
+  border: none;
+  width: 0.32rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  text-align: center;
+  margin-top: 0.05rem;
+  margin-right: 0.1rem;
+}

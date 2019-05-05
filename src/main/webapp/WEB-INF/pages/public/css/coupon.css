@@ -1,0 +1,87 @@
+.item-box {
+  width: 94%;
+  margin: 0.3rem auto 0.3rem;
+}
+.item-box li {
+  margin: 0.3rem 0 0;
+  background: #fff;
+  padding: 0.5rem 0.3rem 0.5rem 0.15rem;
+  border-radius: 10px;
+  position: relative;
+}
+.item-left {
+  font-size: 0.48rem;
+  color: #86cf70;
+  float: left;
+  font-weight: bold;
+  padding-top: 0.2rem;
+  width: 25%;
+  text-align: center;
+}
+.item-left span {
+  font-size: 0.78rem;
+  padding-left: 0.1rem;
+  display: inline-block;
+}
+.item-left .free-tip {
+  font-size: 0.48rem;
+  padding-top: 0.18rem;
+  display: inline-block;
+}
+.item-right {
+  float: right;
+}
+.use-btn {
+  font-size: 0.32rem;
+  border: none;
+  background: #86cf70;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.1rem 0.2rem;
+  float: right;
+  outline: none;
+}
+.item-right-top {
+  position: relative;
+}
+.item-right-top span {
+  font-size: 0.36rem;
+  color: #3f3f3f;
+  float: left;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.item-right-bottom {
+  font-size: 0.28rem;
+  color: #6f6f6f;
+  padding-top: 0.4rem;
+}
+.line-box {
+  position: absolute;
+  top: 0;
+  left: 28%;
+  height: 100%;
+}
+.line-box img {
+  height: 100%;
+}
+.nomore-box{
+  font-size: .28rem;
+  color:#9f9f9f;
+  padding-bottom: .3rem;
+}
+.empty-box{
+  margin: 20% 0 0;
+  text-align: center;
+}
+.empty-box img{
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.empty-box p {
+  font-size: .28rem;
+  color: #9f9f9f;
+  padding-top: .5rem;
+}

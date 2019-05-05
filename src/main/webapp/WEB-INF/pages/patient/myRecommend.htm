@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<base th:href="${contextPath}" href="/pages/">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>我的推荐</title>
+    <base href="../" />
+    <link rel="stylesheet" href="public/css/common.css" />
+    <link rel="stylesheet" href="public/css/myRecommend.css" />
+    <style>
+      [v-if] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="recommend">
+      <div class="data-box">
+        <div class="data-top-box">
+          <div class="data-count-box">
+            <span>{{ info.count }}</span
+            >人
+          </div>
+          <div class="data-top-title">
+            已获收益
+          </div>
+        </div>
+        <div class="data-bottom-box clearfloat">
+          <div class="bottom-left-box">
+            <div>
+              <span class="count-box">{{ info.ticket }}</span
+              >张
+            </div>
+            <div>
+              单次抵用券
+            </div>
+          </div>
+          <div class="line-box"></div>
+          <div class="bottom-right-box">
+            <div>
+              <span class="count-box">{{ info.money }}</span
+              >元
+            </div>
+            <div>
+              现金抵用券
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="recommend-tab-box clearfloat">
+        <div :class="{active:level == 1}" @click="changeTab(1)">
+          一级推荐
+        </div>
+        <div :class="{active:level == 2}" @click="changeTab(2)">
+          二级推荐
+        </div>
+      </div>
+      <ul class="recommend-list">
+        <li class="clearfloat" v-for="(person,index) in list" :class="{borderNone:index == list.length-1}">
+          <img :src="person.headimg" /><span class="name-box">{{
+            person.name
+          }}</span
+          ><span class="time-box">{{ person.createTime | date }}</span>
+        </li>
+        <li class="none-box" v-if="!isLoading && !list.length">
+          快去邀请好友吧~
+        </li>
+        <li class="none-box clearfloat" v-if="isLoading">
+          <img src="./public/img/jiazai.gif" />
+        </li>
+      </ul>
+    </div>
+    <script src="plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script src="plugin/vue/vue.js"></script>
+    <script src="public/js/common.js"></script>
+    <script src="public/js/vue-common.js"></script>
+    <script src="public/js/myRecommend.js"></script>
+  </body>
+</html>

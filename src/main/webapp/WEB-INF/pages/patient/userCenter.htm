@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base th:href="${contextPath}" href="/pages/" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+      name="viewport"
+    />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <title>我的</title>
+    <base href="../" />
+    <link rel="stylesheet" href="public/css/common.css" />
+    <link rel="stylesheet" href="public/css/userCenter.css" />
+    <style>
+      [v-if] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="selfInformation" v-if>
+      <div class="top-box">
+        <div class="info-box">
+          <img
+            :src="selfInfor.headimg"
+            class="self-headImg"
+            @click="goInfo()"
+          />
+          <img
+            src="./public/img/huiyuan@2x.png"
+            class="vip-box"
+            @click="goInfo()"
+          />
+          <div class="name-box" @click="goInfo()">
+            {{ selfInfor.name }}
+            <img
+              src="./public/img/nvxing@2x.png"
+              class="self-xingb"
+              v-if="selfInfor.sex == 2"
+            />
+            <img src="./public/img/nanxing@2x.png" class="self-xingb" v-else />
+          </div>
+          <div class="phone-box" @click="goInfo()">{{ selfInfor.phone }}</div>
+          <div class="recommend-box">
+            <img
+              @click="goShare()"
+              class="recommend-btn"
+              src="./public/img/tuijian@2x.png"
+            />
+          </div>
+        </div>
+      </div>
+      <ul class="middle-box">
+        <li>
+          <a href="patient/myRecommend.htm" class="clearfloat item-box">
+            <span class="msg-left"
+              ><img
+                class="icon"
+                src="./public/img/wodetuijian@2x.png"
+              />我的推荐</span
+            >
+            <img class="msg-right" src="./public/img/gegnduo@2x.png" />
+          </a>
+        </li>
+        <li>
+          <a href="patient/caseHistory.htm" class="clearfloat item-box">
+            <span class="msg-left"
+              ><img
+                class="icon"
+                src="./public/img/bingli@2x.png"
+              />我的病历</span
+            >
+            <img class="msg-right" src="./public/img/gegnduo@2x.png" />
+          </a>
+        </li>
+        <li>
+          <a href="patient/coupon.htm" class="clearfloat item-box">
+            <span class="msg-left"
+              ><img class="icon" src="./public/img/quan@2x.png" />电子券</span
+            >
+            <img class="msg-right" src="./public/img/gegnduo@2x.png" />
+          </a>
+        </li>
+        <li>
+          <a href="patient/vip.htm" class="clearfloat item-box border-none">
+            <span class="msg-left"
+              ><img
+                class="icon"
+                src="./public/img/wodehuiyuan@2x.png"
+              />会员中心</span
+            >
+            <img class="msg-right" src="./public/img/gegnduo@2x.png" />
+          </a>
+        </li>
+      </ul>
+      <ul class="middle-box bottom-box">
+        <li>
+          <a href="patient/systemMsg.htm" class="clearfloat item-box">
+            <span class="msg-left"
+              ><img
+                class="icon"
+                src="./public/img/xiaoxi@2x.png"
+              />系统消息</span
+            >
+            <img class="msg-right" src="./public/img/gegnduo@2x.png" />
+            <span class="badge" v-if="unread">{{ unread }}</span>
+          </a>
+        </li>
+        <li>
+          <a href="patient/qaq.htm" class="clearfloat item-box border-none">
+            <span class="msg-left"
+              ><img
+                class="icon"
+                src="./public/img/wentifankui@2x.png"
+              />问题反馈</span
+            >
+            <img class="msg-right" src="./public/img/gegnduo@2x.png" />
+          </a>
+        </li>
+      </ul>
+      <div class="self-bottom">
+        <a href="./index.htm">
+          <div class="nav1"><img src="./public/img/zhuye@2x.png" />主页</div>
+        </a>
+        <a href="./doctor/pharmacist.htm">
+          <div class="nav1"><img src="./public/img/fenlei@2x.png" />药师</div>
+        </a>
+        <a href="./patient/userCenter.htm">
+          <div class="nav2 attr">
+            <img src="./public/img/wode_1@2x.png" />我的
+          </div>
+        </a>
+      </div>
+    </div>
+    <script src="plugin/jquery/jquery-3.2.1.min.js"></script>
+    <script src="plugin/vue/vue.js"></script>
+    <script src="public/js/common.js"></script>
+    <script src="public/js/userCenter.js"></script>
+  </body>
+</html>

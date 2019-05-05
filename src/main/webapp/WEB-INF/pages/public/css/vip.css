@@ -1,0 +1,66 @@
+html{
+  background: #fff;
+}
+.loading-box{
+  margin-top: 20%;
+}
+.card-box {
+  position: relative;
+  width: 6.76rem;
+  height: 4.71rem;
+  margin: 0.6rem auto 0.2rem;
+}
+.card-box .container {
+  width: 6.76rem;
+  height: 4.71rem;
+}
+.card-box .icon-box {
+  position: absolute;
+  left: 0.65rem;
+  top: 0.8rem;
+  width: 100%;
+}
+.card-box .icon-box img {
+  width: 0.96rem;
+  height: 0.96rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.card-box .icon-box span {
+  font-size: 0.36rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 1.3rem;
+  transform: translateY(-50%);
+}
+.content-box {
+  text-align: center;
+}
+.content-box p {
+  color: #6f6f6f;
+  font-size: 0.28rem;
+}
+.content-box .day-tip {
+  color: #ff3c3c;
+  font-size: 0.28rem;
+}
+.content-box img {
+  height: 0.88rem;
+  margin: 0.2rem 0 0.6rem;
+}
+.intro-box {
+  width: 92%;
+  margin: 0 auto;
+}
+.intro-box li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  font-size: 0.28rem;
+  color: #6f6f6f;
+}
+.intro-box li img {
+  width: 1.5rem;
+  height: 1.5rem;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base th:href="${contextPath}" href="/pages/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>个人信息</title>
+    <base href="../">
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/selfInformation.css">
+</head>
+<body>
+<div id="selfInformation">
+    <ul class="self-msg">
+        <li class="clearfloat">
+            <div class="msg-left">头像</div>
+            <div class="msg-right"><img :src="selfInfor.headimg" class="self-headImg" alt=""></div>
+        </li>
+        <li class="clearfloat">
+            <span class="msg-left">姓名</span>
+            <div class="msg-right line-hei120" @click="selfMsgChange('姓名修改',1)">{{selfInfor.name}}</div>
+        </li>
+        <li class="clearfloat">
+            <span class="msg-left">性别</span>
+            <div class="msg-right line-hei120" @click="selfSexChange()">
+                <img src="./public/img/nvxing@2x.png" class="self-xingb" v-if="selfInfor.sex == 2" alt="">
+                <img src="./public/img/nanxing@2x.png" class="self-xingb" v-else alt="">
+            </div>
+        </li>
+        <li class="clearfloat">
+            <span class="msg-left">年龄</span>
+            <div class="msg-right line-hei120" @click="selfMsgChange('年龄修改',2)">{{selfInfor.age}}</div>
+        </li>
+        <li class="clearfloat border-none">
+            <span class="msg-left">手机号</span>
+            <div class="msg-right line-hei120" @click="selfMsgChange('手机号修改',3)">{{selfInfor.phone}}</div>
+        </li>
+    </ul>
+    <div class="mask" :class="{'attr':textIsChange}">
+        <div class="text-change">
+            <div class="text-title">{{changeTitle}}
+                <div class="text-close" @click="textIsChange = !textIsChange"></div>
+            </div>
+            <input type="text" class="change-content" v-model="changeContent" v-show="clickIndex==1">
+            <input type="number" class="change-content" v-model="changeContent" v-show="clickIndex==2||clickIndex==3">
+            <div class="to-communicate" style="margin: 0 auto .6rem" v-show="clickIndex==1" @click="selfNameChange">确认修改</div>
+            <div class="to-communicate" style="margin: 0 auto .6rem" v-show="clickIndex==2" @click="selfAgeChange">确认修改</div>
+            <div class="to-communicate" style="margin: 0 auto .6rem" v-show="clickIndex==3" @click="selfPhoneChange">确认修改</div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="plugin/jquery/jquery-3.2.1.min.js"></script>
+<script src="plugin/vue/vue.js"></script>
+<script src="public/js/common.js"></script>
+<script src="public/js/selfInformation.js"></script>
+</html>

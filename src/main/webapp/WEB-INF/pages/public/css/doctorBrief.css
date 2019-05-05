@@ -1,0 +1,263 @@
+.background {
+    background: #86CD74;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ysTitle {
+    z-index: 1;
+    background-color: #FFFFFF;
+    width: 94%;
+    height: 2.5rem;
+    position: relative;
+    top: 1rem;
+    border-radius: 8px;
+}
+
+#avatar {
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+}
+
+.ui-list {
+    border-radius: 8px;
+    height: 100%;
+}
+
+.background .ysTitle .ui-list .ysName {
+    font-family: "STHeiti SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    top: -0.3rem;
+    color: black;
+    font-size: 0.4rem;
+}
+
+.background2 .ysTitle .ui-list .ysName2 {
+    font-family: "STHeiti SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    top: -0.5rem;
+    left: 0.8rem;
+    color: #494949;
+    font-size: 0.4rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ui-list .ui-list-info .ysTitle2 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: -0.2rem;
+    color: #86CD74;
+    font-size: 0.3rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ui-list-img-horizontal {
+    height: 2rem;
+}
+
+.ysTitle .ui-list .ui-list-info .leftBias {
+    position: relative;
+    left: -01rem;
+}
+
+.ui-list .ui-list-info .volume {
+    color: #272727;
+    position: relative;
+    top: 0.1rem;
+    font-size: 0.28rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+.background .ysTitle .ui-list li {
+    width: 100%;
+}
+
+.back {
+    position: fixed;
+    /*position: relative;*/
+    width: 0.3rem;
+    left: 0.2rem;
+}
+
+.header2 {
+    /*width: 100%;*/
+    /*height: 1rem;*/
+    display: inline-block;
+    font-size: 0.4rem;
+    color: #FFFFFF;
+    line-height: 1rem;
+    text-align: center;
+    position: fixed;
+    -webkit-font-smoothing: antialiased;
+}
+
+li {
+    width: 100%;
+}
+
+.div1 {
+    position: relative;
+    top: 1.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul2 {
+    width: 94%;
+}
+
+.icon {
+    position: relative;
+    width: 0.6rem;
+    height: 0.6rem;
+}
+
+.t0 {
+    position: relative;
+    left: 0.7rem;
+    top: -0.6rem;
+    color: #4d4d4d;
+    width: 30%;
+}
+
+.c0 {
+    width: 95%;
+    position: relative;
+    top: -0.6rem;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0.2rem 0;
+}
+
+.c1 {
+    width: 95%;
+    position: relative;
+    top: 0rem;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0.2rem 0;
+}
+
+.c2 {
+    position: relative;
+    top: 0.1rem;
+}
+
+.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cost {
+    display: inline-block;
+    color: #515151;
+    font-size: 0.3rem;
+    position: relative;
+    top: 0.2rem;
+}
+
+.cost2 {
+    display: inline-block;
+    color: #86CD74;
+    font-size: 0.35rem;
+}
+
+.xi {
+    -webkit-font-smoothing: antialiased;
+}
+
+.vip {
+    width: 0.5rem;
+    height: 0.5rem;
+
+}
+
+.vipBox {
+    margin: 0.2rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.open {
+    background-color: #FBA22F;
+    border-radius: 40px;
+    width: 1.5rem;
+    color: #FFFFFF;
+    text-align: center;
+    display: inline-block;
+}
+
+.vipText {
+    color: #444444;
+    position: relative;
+    left: -1.3rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #86CD74;
+    height: 1rem;
+    z-index: 3;
+}
+
+li {
+    border: none;
+}
+
+.btn {
+    color: white;
+    height: 0.7rem;
+    background-color: #86CD74;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.img-btm {
+    position: relative;
+    left: -0.1rem;
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.topLess {
+    position: relative;
+    top: -0.6rem;
+}
+
+.topLess1 {
+    position: relative;
+    top: -1.2rem;
+}
+
+.topLess2 {
+    position: relative;
+    top: -1.8rem;
+}
+
+.topLess3 {
+    position: relative;
+    top: -0.5rem;
+}
+.topLess4 {
+    position: relative;
+    top: -0.3rem;
+}
+.topLess5 {
+    position: relative;
+    top: -0.17rem;
+}
+.height1{
+    height: 5rem;
+}

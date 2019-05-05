@@ -1,0 +1,57 @@
+html {
+  background: #e2ecdf;
+}
+.top-box {
+  width: 100%;
+}
+.code-box {
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  text-align: center;
+}
+.code-box .code-container {
+  width: 4.8rem;
+}
+.share-btn {
+  height: 0.8rem;
+}
+.btn-box {
+  text-align: center;
+  padding-top: 2.6rem;
+}
+.middle-box {
+  color: #3f3f3f;
+  font-size: 0.32rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.middle-box img {
+  height: 1.1rem;
+  margin-top: 0.1rem;
+}
+.bottom-box {
+  margin: 0 auto 0.4rem;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.3rem 0.2rem;
+  width: 80%;
+}
+.bottom-box .title-box {
+  color: #3f3f3f;
+  font-size: 0.32rem;
+  text-align: center;
+  padding-bottom: 0.2rem;
+}
+.bottom-box p {
+  color: #6f6f6f;
+  font-size: 0.28rem;
+  text-align: left;
+}
+.code{
+  position: absolute;
+  width: 2.8rem;
+  height: 2.8rem;
+  top: .3rem;
+  left: 2.3rem;
+}
